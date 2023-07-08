@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import FooterDev from "../components/footer";
 import SideListings from "../components/sideListings";
 import Aside from "../components/aside";
+import PostCard from "../components/postCard";
+import Relevants from "../components/relevants";
 
 export default function Home() {
   return (
@@ -15,7 +17,10 @@ export default function Home() {
           <div>
             <Aside />
           </div>
-          <div>Main</div>
+          <div>
+            <Relevants />
+            <PostCard />
+          </div>
           <div>
             <SideListings />
           </div>

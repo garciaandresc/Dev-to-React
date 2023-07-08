@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
+import Login from "./pages/login";
+import Post from "./pages/post";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +13,12 @@ const router = createBrowserRouter([
     errorElement: <h1>Not found</h1>,
   },
   {
-    path: "/signIn",
-    element: <p>signin</p>,
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/post",
+    element: <Post />,
   },
 ]);
 
