@@ -2,7 +2,7 @@ export default function Navbar() {
   return (
     <div className="flex flex-row w-auto bg-white justify-between pb-1 shadow-sm">
       <div className="flex pl-80">
-        <a href="">
+        <a href="http://localhost:5173">
           <img
             className="w-[50px] m-2"
             src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
@@ -26,7 +26,7 @@ export default function Navbar() {
                   height="24"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
-                  class="crayons-icon c-btn__icon"
+                  className="crayons-icon c-btn__icon"
                   focusable="false"
                 >
                   <path d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"></path>
@@ -39,7 +39,7 @@ export default function Navbar() {
       <div className="flex flex-col w-60 items-center mr-80">
         <div className="flex gap-5 justify-center items-center h-full">
           <span className="border-blue-600 border-[1px] rounded-md p-1.5 pl-4 pr-4 text-blue-600 font-semibold">
-            <a href="">Create Post</a>
+            <a href="http://localhost:5173/login">Create Post</a>
           </span>
           <a href="">
             <svg

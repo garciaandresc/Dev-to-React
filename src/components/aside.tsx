@@ -18,7 +18,7 @@ export default function Aside() {
           </a>
           <a
             className="flex justify-center rounded-md w-full pb-2 pt-2  hover:text-blue-700  hover:bg-blue-700/10 m-1 hover:underline"
-            href=""
+            href="http://localhost:5173/login"
           >
             Log in
           </a>

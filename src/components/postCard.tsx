@@ -1,9 +1,12 @@
 export default function PostCard() {
   return (
     <section className="flex flex-row full-card  rounded-lg bg-dev-to-card-color">
-      <a className="ancor-card border-[1px] rounded-lg mt-4 w-[700px]" href="#">
+      <a
+        className="ancor-card border-[1px] rounded-lg mt-4 w-[700px]"
+        href="http://localhost:5173/post"
+      >
         <div className="img-top">
-          <a href="#">
+          <a href="http://localhost:5173/post">
             <img
               src="https://res.cloudinary.com/practicaldev/image/fetch/s--EwpDTF_Y--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yd6aq31hp8zzt8jb9dii.png"
               alt="img del post"
