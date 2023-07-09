@@ -1,7 +1,48 @@
 import Navbar from "../components/navbar";
 import FooterDev from "../components/footer";
+import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+import { useForm } from "react-hook-form";
+
+interface LoginData {
+  usermail: string;
+  password: string;
+}
 
 export default function Login() {
+  const navigate = useNavigate();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<LoginData>();
+
+  function onSubmit(data: LoginData) {
+    fetch("https://dummyjson.com/auth/login", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({
+        usermail: data.usermail,
+        password: data.password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("response: ", res);
+        if (res?.token) {
+          localStorage.setItem("token", res.token);
+          /* const token = localStorage.getItem("token"); */
+          navigate("/dashboard");
+        } else {
+          toast.error("token no encontrado");
+        }
+      })
+      .catch(() => {
+        toast.error("A donde cainal, no pasas prro");
+      });
+  }
+
   return (
     <>
       <Navbar />
@@ -99,20 +140,39 @@ export default function Login() {
               Have a password? Continue with your email address
             </span>
           </div>
-          <form action="submit" className="flex flex-col gap-3">
-            <label className="font-normal text-md text-[#171717]" htmlFor="">
+
+          <ToastContainer />
+
+          <form
+            action="submit"
+            className="flex flex-col gap-3"
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <label
+              className="font-normal text-md text-[#171717]"
+              htmlFor="email"
+            >
               Email
             </label>
             <input
-              className="border-slate-400 h-12 border rounded-md bg-[#fff]"
+              {...register("usermail", {
+                required: { value: true, message: "Email required" },
+              })}
+              className="border-slate-400 h-12 border rounded-md bg-[#fff] p-2"
               type="email"
             />
-            <label className="font-normal text-md text-[#171717]" htmlFor="">
+            <label
+              className="font-normal text-md text-[#171717]"
+              htmlFor="password"
+            >
               {" "}
               Password
             </label>
             <input
-              className="border-slate-400 h-12 border rounded-md bg-[#fff]"
+              {...register("password", {
+                required: { value: true, message: "Password Required" },
+              })}
+              className="border-slate-400 h-12 border rounded-md bg-[#fff] p-2"
               type="password"
             />
             <div className="flex gap-2 hover:bg-[] items-center py-3">
@@ -123,7 +183,7 @@ export default function Login() {
                 className="appearance-none w-[18px] h-[18px] rounded-md border-2 border-gay-900 cursor-pointer  default-text-[#fff] checked:text-red checked:bg-blue-500"
               />
               <label className="text-[#171717]" htmlFor="rememberme">
-                Remenber me
+                Remember me
               </label>
             </div>
             <div className="bg-[#3B49DF] text-[#fff] h-12 flex items-center justify-center font-semibold rounded cursor-pointer">

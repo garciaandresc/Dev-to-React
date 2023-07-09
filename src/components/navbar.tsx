@@ -12,9 +12,9 @@ export default function Navbar() {
         <div className="flex items-center border border-gray-300 hover:border-gray-500 rounded-md m-2 w-[407px] flex-wrap">
           <form className="" action="">
             <div className="flex flex-row justify-between mr-2">
-              <div className="flex">
+              <div className="flex justify-center items-center">
                 <input
-                  className="pl-2 h-8 w-[365px] border-none ring-0"
+                  className="ml-1 pl-2 h-8 w-[363px] appearance-none border-none ring-0 items-center"
                   placeholder="Search..."
                   type="text"
                 />
