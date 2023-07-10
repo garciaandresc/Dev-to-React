@@ -15,7 +15,7 @@ export default function UserDetails() {
           </div>
           <div className="flex flex-col justify-center items-center w-full">
             <a
-              className=" flex justify-center bg-blue-700 border-blue-500 border rounded-md w-full mb-2 pb-2 pt-2 font-semibold text-white hover:bg-blue-700"
+              className=" flex justify-center bg-blue-700 border-blue-500 border rounded-md w-full mb-2 pb-2 pt-2 font-semibold text-white hover:bg-blue-800"
               href=""
             >
               Follow

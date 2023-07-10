@@ -1,7 +1,7 @@
 export default function NewPost() {
   return (
     <main className="bg-[#f5f5f5] min-h-screen flex flex-col items-center">
-      <section className="flex w-[850px] items-center">
+      <section className="flex w-[900px] items-center">
         <nav className="flex w-full items-center justify-between">
           <a href="http://localhost:5173">
             <img
@@ -14,30 +14,36 @@ export default function NewPost() {
             <span className="font-semibold text-sm">Create Post</span>
           </div>
           <div>
-            <ul className="flex gap-4 text-sm">
-              <li className="font-semibold">Edit</li>
-              <li>Preview</li>
+            <ul className="flex text-sm">
+              <li className="font-semibold p-2 pr-4 pl-4 rounded-md text-sm hover:bg-blue-700/10 hover:text-blue-700 ">
+                Edit
+              </li>
+              <li className="p-2 pr-4 pl-4 rounded-md text-sm hover:bg-blue-700/10 hover:text-blue-700">
+                Preview
+              </li>
             </ul>
           </div>
         </nav>
-        <div className="">
+        <div className="absolute right-64">
           <button>
-            <svg
-              className=""
-              aria-hidden="true"
-              focusable="false"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="m12 10.586 4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path>
-            </svg>
+            <a href="http://localhost:5173/">
+              <svg
+                className=""
+                aria-hidden="true"
+                focusable="false"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="m12 10.586 4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path>
+              </svg>
+            </a>
           </button>
         </div>
       </section>
-      <section className="w-[850px] h-full border rounded-md border-gray-200 mt-1">
-        <div className="w-full h-auto bg-white rounded-md gap-4">
+      <section className="w-[850px] h-full border rounded-md border-gray-200 mt-[1px]">
+        <div className="w-full h-[750px] bg-white rounded-md gap-4">
           <div className="grid grid-cols-3 grid-rows-2 items-end">
             <div className="p-4 pt-6">
               <h1 className="font-semibold text-3xl">Post Title</h1>
@@ -223,7 +229,7 @@ export default function NewPost() {
           </div>
           <div className="flex w-full justify-center">
             <textarea
-              className=" mt-1 rounded-md"
+              className="pl-4 mt-1 rounded-md font-mono"
               name=""
               id=""
               cols="110"
