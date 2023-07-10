@@ -6,24 +6,24 @@ import { ToastContainer, toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 
 interface LoginData {
-  usermail: string;
+  email: string;
   password: string;
 }
 
 export default function Login() {
   const navigate = useNavigate();
   const {
-    handleSubmit,
     register,
+    handleSubmit,
     formState: { errors },
   } = useForm<LoginData>();
 
   function onSubmit(data: LoginData) {
-    fetch("http://localhost:8080", {
+    fetch("http://localhost:8080/auth", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
-        usermail: data.usermail,
+        email: data.email,
         password: data.password,
       }),
     })
@@ -33,7 +33,7 @@ export default function Login() {
         if (res?.token) {
           localStorage.setItem("token", res.token);
           /* const token = localStorage.getItem("token"); */
-          navigate("/dashboard");
+          navigate("/");
         } else {
           toast.error("token no encontrado");
         }
@@ -155,9 +155,7 @@ export default function Login() {
               Email
             </label>
             <input
-              {...register("usermail", {
-                required: { value: true, message: "Email required" },
-              })}
+              {...register("email")}
               className="border-slate-400 h-12 border rounded-md bg-[#fff] p-2"
               type="email"
             />
@@ -169,9 +167,7 @@ export default function Login() {
               Password
             </label>
             <input
-              {...register("password", {
-                required: { value: true, message: "Password Required" },
-              })}
+              {...register("password")}
               className="border-slate-400 h-12 border rounded-md bg-[#fff] p-2"
               type="password"
             />
