@@ -20,7 +20,7 @@ export default function PostCard() {
               <div>
                 <a>
                   <img
-                    src="https://randomuser.me/api/portraits/women/60.jpg"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s---VHQhOQi--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/835502/9e63c9bc-4d9d-4638-b411-d0ec95dbb351.jpeg"
                     alt="imagen de usuario"
                     className="rounded-full w-full"
                   ></img>
@@ -29,16 +29,14 @@ export default function PostCard() {
             </div>
             <div className=" gap-1 ps-2 mt-1 items-center user-creator">
               <div className="flex">
-                <p className="font-semibold text-sm ">Thomas Alger for</p>
-                <p className="font-semibold text-sm ">AWS Community Services</p>
+                <p className="font-semibold text-sm ">Jhon Deer</p>
+                <p className="font-semibold text-sm "></p>
               </div>
-              <a>7 days ago</a>
+              <a>2 days ago</a>
             </div>
           </div>
           <div className="reactions-container">
-            <h5 className="font-bold text-3xl mx-9  pb-3 ">
-              🦄 Building a pricing page with NextJS 🤯 🤯
-            </h5>
+            <h5 className="font-bold text-3xl mx-9  pb-3 ">🦄 NextJS 🤯 🤯</h5>
             <div className="flex gap-5 ms-10 py-2 post-tags text-sm">
               <a>
                 <span className="text-amber-400">#</span>tag1
