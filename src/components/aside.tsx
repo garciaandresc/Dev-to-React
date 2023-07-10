@@ -12,7 +12,7 @@ export default function Aside() {
         <div className="flex flex-col justify-center items-center w-full">
           <a
             className="flex justify-center border-blue-500 border rounded-md w-full pb-2 pt-2 font-semibold text-blue-700 hover:text-white hover:bg-blue-700 hover:underline"
-            href=""
+            href="http://localhost:5173/signin"
           >
             Create account
           </a>
