@@ -7,24 +7,6 @@ import { useNavigate } from "react-router-dom";
 } */
 
 export default function NewPost() {
-  const navigate = useNavigate();
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm();
-
-  function onSubmit() {
-    fetch("http://localhost:8080/post", {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify({
-        username: data.username,
-        password: data.password,
-      }),
-    });
-  }
-
   return (
     <main className="bg-[#f5f5f5] min-h-screen flex flex-col items-center">
       <section className="flex w-[900px] items-center">
