@@ -1,4 +1,6 @@
-interface PostProps {
+import { Link } from "react-router-dom";
+
+export interface PostProps {
   post: {
     content: string;
     date: string;
@@ -22,37 +24,37 @@ export default function PostCard(post: PostProps) {
   console.log("este es el post", post.post.image);
   return (
     <section className="flex flex-row full-card  rounded-lg bg-dev-to-card-color">
-      <a
+      <Link
         className="ancor-card border-[1px] rounded-lg mt-4 w-[700px]"
-        href="http://localhost:5173/post"
+        to={`/post?${post.post._id}`}
       >
         <div className="img-top">
-          <a href="http://localhost:5173/post">
+          <Link to={`/post?${post.post._id}`}>
             <img
               src={post.post.image}
               alt="img del post"
               className="rounded-t-lg"
             ></img>
-          </a>
+          </Link>
         </div>
         <div className="card-content p-5 bg-white rounded-lg">
           <div className="flex flex-wrap h-3/6">
             <div className="w-[3rem]  profile-picture">
               <div>
                 <a>
-                  {/* <img
+                  <img
                     src={post.post.userCreatorId.profilePicture}
                     alt="imagen de usuario"
                     className="rounded-full w-full"
-                  ></img> */}
+                  ></img>
                 </a>
               </div>
             </div>
             <div className=" gap-1 ps-2 mt-1 items-center user-creator">
               <div className="flex">
-                {/* <p className="font-semibold text-sm ">
+                <p className="font-semibold text-sm ">
                   {post.post.userCreatorId.name}
-                </p> */}
+                </p>
                 <p className="font-semibold text-sm "></p>
               </div>
               <a>{`${post.post.time} days ago`}</a>
@@ -98,7 +100,7 @@ export default function PostCard(post: PostProps) {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </section>
   );
 }

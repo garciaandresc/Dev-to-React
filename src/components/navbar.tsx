@@ -44,7 +44,7 @@ export default function Navbar() {
           <>
             <div className="rounded-md m-[1px] flex  justify-center items-center hover:bg-[#3b49df]">
               <span className="border-blue-600 border-[1px] rounded-md p-1.5 pl-4 pr-4 text-blue-600 font-semibold hover:text-white hover:bg-blue-500">
-                <a href="http://localhost:5173/login">Create Post</a>
+                <a href="http://localhost:5173/newPost">Create Post</a>
               </span>
             </div>
             <a href="">
