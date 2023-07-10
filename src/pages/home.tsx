@@ -6,6 +6,18 @@ import Aside from "../components/aside";
 import PostCard from "../components/postCard";
 import Relevants from "../components/relevants";
 
+function Fetch() {
+  fetch("http://localhost:8080/post")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("esto es data:", data);
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
+}
+Fetch();
+
 export default function Home() {
   return (
     <main className="bg-[#f5f5f5] min-h-screen">
@@ -19,7 +31,6 @@ export default function Home() {
           </div>
           <div>
             <Relevants />
-            <PostCard />
             <PostCard />
           </div>
           <div>
