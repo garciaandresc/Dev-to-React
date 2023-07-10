@@ -5,20 +5,20 @@ import SideListings from "../components/sideListings";
 import Aside from "../components/aside";
 import PostCard from "../components/postCard";
 import Relevants from "../components/relevants";
-
-function Fetch() {
-  fetch("http://localhost:8080/post")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("esto es data:", data);
-    })
-    .catch((error) => {
-      console.log("error", error);
-    });
-}
-Fetch();
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [posts, setPosts] = useState<any>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/post")
+      .then((response) => response.json())
+      .then((response) => setPosts(response.data))
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }, []);
+  console.log(posts);
   return (
     <main className="bg-[#f5f5f5] min-h-screen">
       <header>
@@ -31,7 +31,9 @@ export default function Home() {
           </div>
           <div>
             <Relevants />
-            <PostCard />
+            {posts.map((post, index) => (
+              <PostCard key={`index${index}`} post={post} />
+            ))}
           </div>
           <div>
             <SideListings />

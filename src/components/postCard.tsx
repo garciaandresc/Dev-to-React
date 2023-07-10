@@ -1,4 +1,25 @@
-export default function PostCard() {
+interface PostProps {
+  post: {
+    content: string;
+    date: string;
+    heartReactions: string;
+    image: string;
+    marks: string;
+    tags: [string];
+    time: number;
+    title: string;
+    userCreatorId: {
+      name: string;
+      profilePicture: string;
+      _id: string;
+    };
+    _id: string;
+  };
+}
+
+export default function PostCard(post: PostProps) {
+  /* const isTag = post.tags; */
+  console.log("este es el post", post.post.image);
   return (
     <section className="flex flex-row full-card  rounded-lg bg-dev-to-card-color">
       <a
@@ -8,7 +29,7 @@ export default function PostCard() {
         <div className="img-top">
           <a href="http://localhost:5173/post">
             <img
-              src="https://res.cloudinary.com/practicaldev/image/fetch/s--EwpDTF_Y--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yd6aq31hp8zzt8jb9dii.png"
+              src={post.post.image}
               alt="img del post"
               className="rounded-t-lg"
             ></img>
@@ -19,25 +40,30 @@ export default function PostCard() {
             <div className="w-[3rem]  profile-picture">
               <div>
                 <a>
-                  <img
-                    src="https://res.cloudinary.com/practicaldev/image/fetch/s---VHQhOQi--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/835502/9e63c9bc-4d9d-4638-b411-d0ec95dbb351.jpeg"
+                  {/* <img
+                    src={post.post.userCreatorId.profilePicture}
                     alt="imagen de usuario"
                     className="rounded-full w-full"
-                  ></img>
+                  ></img> */}
                 </a>
               </div>
             </div>
             <div className=" gap-1 ps-2 mt-1 items-center user-creator">
               <div className="flex">
-                <p className="font-semibold text-sm ">Jhon Deer</p>
+                {/* <p className="font-semibold text-sm ">
+                  {post.post.userCreatorId.name}
+                </p> */}
                 <p className="font-semibold text-sm "></p>
               </div>
-              <a>2 days ago</a>
+              <a>{`${post.post.time} days ago`}</a>
             </div>
           </div>
           <div className="reactions-container">
-            <h5 className="font-bold text-3xl mx-9  pb-3 ">🦄 NextJS 🤯 🤯</h5>
+            <h5 className="font-bold text-3xl mx-9  pb-3 ">
+              {post.post.title}
+            </h5>
             <div className="flex gap-5 ms-10 py-2 post-tags text-sm">
+              //isTag
               <a>
                 <span className="text-amber-400">#</span>tag1
               </a>
@@ -55,7 +81,7 @@ export default function PostCard() {
                     <span className="bg-slate-300  rounded-full">❤</span>
                     <span className="bg-slate-300  rounded-full">🙌</span>
                     <span className="bg-slate-300  rounded-full">🔥</span>
-                    <span className="ps-3">15 reactions</span>
+                    <span className="ps-3">{post.post.heartReactions}</span>
                   </div>
                 </a>
                 <a className="emojis-comments__comments">
@@ -66,7 +92,7 @@ export default function PostCard() {
                 </a>
               </div>
               <div>
-                <small>11 min read</small>
+                <small>{`${post.post.time} 11 min read`}</small>
                 <a href="#">📒</a>
               </div>
             </div>

@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <h1>Not found</h1>,
+    errorElement: <Home />,
   },
   {
     path: "/login",
