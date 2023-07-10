@@ -30,10 +30,10 @@ export default function Login() {
       .then((res) => res.json())
       .then((res) => {
         console.log("response: ", res);
-        if (res?.token) {
-          localStorage.setItem("token", res.token);
+        if (res?.data) {
+          localStorage.setItem("token", res.data);
           /* const token = localStorage.getItem("token"); */
-          navigate("/home");
+          navigate("/");
         } else {
           toast.error("token no encontrado");
         }
