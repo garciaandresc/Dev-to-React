@@ -33,7 +33,7 @@ export default function Login() {
         if (res?.token) {
           localStorage.setItem("token", res.token);
           /* const token = localStorage.getItem("token"); */
-          navigate("/");
+          navigate("/home");
         } else {
           toast.error("token no encontrado");
         }
