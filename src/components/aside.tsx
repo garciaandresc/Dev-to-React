@@ -1,29 +1,36 @@
 export default function Aside() {
+  const token = localStorage.getItem("token");
   return (
     <aside className="mr-1">
-      <div className="bg-white flex-row w-60 border rounded-md h-auto justify-between m-3 pl-4 pr-4 pt-2 pb-2">
-        <h2 className="font-bold text-xl pb-4">
-          DEV Community is a community of 1,096,367 amazing developers
-        </h2>
-        <p className="pb-4">
-          We're a place where coders share, stay up-to-date and grow their
-          careers.
-        </p>
-        <div className="flex flex-col justify-center items-center w-full">
-          <a
-            className="flex justify-center border-blue-500 border rounded-md w-full pb-2 pt-2 font-semibold text-blue-700 hover:text-white hover:bg-blue-700 hover:underline"
-            href="http://localhost:5173/signin"
-          >
-            Create account
-          </a>
-          <a
-            className="flex justify-center rounded-md w-full pb-2 pt-2  hover:text-blue-700  hover:bg-blue-700/10 m-1 hover:underline"
-            href="http://localhost:5173/login"
-          >
-            Log in
-          </a>
+      {token ? (
+        <>
+          <div></div>
+        </>
+      ) : (
+        <div className="bg-white flex-row w-60 border rounded-md h-auto justify-between m-3 pl-4 pr-4 pt-2 pb-2">
+          <h2 className="font-bold text-xl pb-4">
+            DEV Community is a community of 1,096,367 amazing developers
+          </h2>
+          <p className="pb-4">
+            We're a place where coders share, stay up-to-date and grow their
+            careers.
+          </p>
+          <div className="flex flex-col justify-center items-center w-full">
+            <a
+              className="flex justify-center border-blue-500 border rounded-md w-full pb-2 pt-2 font-semibold text-blue-700 hover:text-white hover:bg-blue-700 hover:underline"
+              href="http://localhost:5173/signin"
+            >
+              Create account
+            </a>
+            <a
+              className="flex justify-center rounded-md w-full pb-2 pt-2  hover:text-blue-700  hover:bg-blue-700/10 m-1 hover:underline"
+              href="http://localhost:5173/login"
+            >
+              Log in
+            </a>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="flex w-60 p-4">
         <ul className="flex flex-col gap-1 w-full">

@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
+  const token = localStorage.getItem("token");
   return (
     <div className="flex flex-row w-auto bg-white justify-between pb-1 shadow-sm">
       <div className="flex pl-80">
@@ -36,36 +39,51 @@ export default function Navbar() {
           </form>
         </div>
       </div>
-      <div className="flex flex-col w-60 items-center mr-80">
-        <div className="flex gap-5 justify-center items-center h-full">
-          <span className="border-blue-600 border-[1px] rounded-md p-1.5 pl-4 pr-4 text-blue-600 font-semibold">
-            <a href="http://localhost:5173/login">Create Post</a>
-          </span>
-          <a href="">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              role="img"
-              aria-labelledby="aixln89tw520kux6cfmkkv36dj13xz3g"
-            >
-              <title id="aixln89tw520kux6cfmkkv36dj13xz3g">Notifications</title>
-              <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z"></path>
-            </svg>
-          </a>
-          <div className="flex items-center">
-            <button className="">
-              <span>
-                <img
-                  className="w-8 rounded-full"
-                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--mSjwiJrM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1059775/68925140-4c78-4619-aae4-61c2cf1d8307.jpeg"
-                  alt=""
-                />
+      <div className="flex flex-row w-60 items-center mr-80 justify-center gap-4">
+        {token ? (
+          <>
+            <div className="rounded-md m-[1px] flex  justify-center items-center hover:bg-[#3b49df]">
+              <span className="border-blue-600 border-[1px] rounded-md p-1.5 pl-4 pr-4 text-blue-600 font-semibold hover:text-white hover:bg-blue-500">
+                <a href="http://localhost:5173/login">Create Post</a>
               </span>
-            </button>
+            </div>
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                role="img"
+                aria-labelledby="aixln89tw520kux6cfmkkv36dj13xz3g"
+              >
+                <title id="aixln89tw520kux6cfmkkv36dj13xz3g">
+                  Notifications
+                </title>
+                <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z"></path>
+              </svg>
+            </a>
+            <div className="flex items-center">
+              <button className="">
+                <span>
+                  <img
+                    className="w-8 rounded-full"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--mSjwiJrM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1059775/68925140-4c78-4619-aae4-61c2cf1d8307.jpeg"
+                    alt=""
+                  />
+                </span>
+              </button>
+            </div>
+          </>
+        ) : (
+          <div className="flex gap-5 justify-center items-center  w-[400px] h-full">
+            <span className=" rounded-md p-1.5 pr-4 hover:bg-blue-700/10 ">
+              <a href="http://localhost:5173/login">Log in</a>
+            </span>
+            <span className="border-blue-600 border-[1px] rounded-md p-1.5 pl-4 pr-4 text-blue-600 font-semibold hover:text-white hover:bg-blue-500">
+              <a href="http://localhost:5173/login">Create account</a>
+            </span>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
