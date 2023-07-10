@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Post from "./pages/post";
+import NewPost from "./pages/newPost";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/post",
     element: <Post />,
+  },
+  {
+    path: "newPost",
+    element: <NewPost />,
   },
 ]);
 
