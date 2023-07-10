@@ -19,7 +19,7 @@ export default function Login() {
   } = useForm<LoginData>();
 
   function onSubmit(data: LoginData) {
-    fetch("https://dummyjson.com/auth/login", {
+    fetch("http://localhost:8080", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({

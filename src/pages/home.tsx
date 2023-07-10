@@ -13,12 +13,13 @@ export default function Home() {
         <Navbar />
       </header>
       <section className="flex w-full justify-center">
-        <div className="flex flex-shrink justify-between w-[1250px] self-center">
+        <div className="flex justify-between w-[1250px] self-center">
           <div>
             <Aside />
           </div>
           <div>
             <Relevants />
+            <PostCard />
             <PostCard />
           </div>
           <div>
