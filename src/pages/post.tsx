@@ -1,10 +1,10 @@
 import Navbar from "../components/navbar";
-import PostDetails from "../components/postDetails";
+
 import PostCard from "../components/postCard";
 import FooterDev from "../components/footer";
 import AsidePost from "../components/asidePost";
 import UserDetails from "../components/userDetails";
-import { PostProps } from "../components/postCard";
+
 import { useState, useEffect } from "react";
 
 export default function Post() {

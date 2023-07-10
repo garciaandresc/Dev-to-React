@@ -1,11 +1,3 @@
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-
-/* interface PostData {
-  username: string;
-  password: string;
-} */
-
 export default function NewPost() {
   return (
     <main className="bg-[#f5f5f5] min-h-screen flex flex-col items-center">
