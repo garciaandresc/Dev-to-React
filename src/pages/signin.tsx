@@ -14,11 +14,7 @@ interface LoginData {
 
 export default function Singin() {
   const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<LoginData>();
+  const { register, handleSubmit } = useForm<LoginData>();
 
   function onSubmit(data: LoginData) {
     fetch("http://localhost:8080/", {

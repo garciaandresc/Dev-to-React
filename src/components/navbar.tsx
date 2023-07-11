@@ -1,7 +1,7 @@
 export default function Navbar() {
   const token = localStorage.getItem("token");
   return (
-    <div className="flex flex-row w-auto bg-white justify-between pb-1 shadow-sm">
+    <div className="flex flex-row w-auto bg-white justify-between pb-1 shadow-sm ">
       <div className="flex pl-80">
         <a href="http://localhost:5173">
           <img
