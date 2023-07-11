@@ -209,7 +209,7 @@ export default function NewPost() {
               </button>
             </div>
             <div>
-              <button className="mr-1 p-2 mr-9 rounded-md hover:bg-blue-100 hover:fill-blue-700">
+              <button className=" p-2 mr-9 rounded-md hover:bg-blue-100 hover:fill-blue-700">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -232,8 +232,8 @@ export default function NewPost() {
               className="pl-4 mt-1 rounded-md font-mono"
               name=""
               id=""
-              cols="110"
-              rows="10"
+              cols={110}
+              rows={10}
               placeholder="Write your post content here"
             ></textarea>
           </div>

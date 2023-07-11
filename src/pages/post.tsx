@@ -30,10 +30,12 @@ export default function Post() {
       <Navbar />
       <section className="flex justify-center">
         <AsidePost />
+
         {loading ? <p>Loading</p> : <PostCard post={posts} />}
 
         <UserDetails />
       </section>
+      <div className="h-[70px]"></div>
       <FooterDev />
     </main>
   );

@@ -236,6 +236,91 @@ export default function Aside() {
           <p className="pl-6">#tag</p>
         </div>
       </div>
+      <div className="bg-white flex-row w-60 border rounded-md h-auto justify-between m-3 pl-4 pr-4 pt-4 pb-2">
+        <div className="flex w-full justify-between items-center mb-4">
+          <h2 className="text-sm">DEV Community</h2>
+          <span>
+            <button className="p-1 hover:bg-gray-200 rounded-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                role="img"
+                aria-labelledby="a5dvesoe7aqzaq3fft2f8ptzdog3uv8c"
+                className="crayons-icon pointer-events-none"
+              >
+                <title id="a5dvesoe7aqzaq3fft2f8ptzdog3uv8c">
+                  Dropdown menu
+                </title>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                ></path>
+              </svg>
+            </button>
+          </span>
+        </div>
+        <img
+          className="mb-9"
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--KfYhPrXu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gxatl8njvv45ht30hcx9.png"
+          alt=""
+        />
+        <p className="pb-4 font-bold">
+          <a className="text-blue-700 font-bold mr-1 underline" href="">
+            Fill out this survey
+          </a>
+          and help us moderate our community by becoming a tag moderator here at
+          DEV.
+        </p>
+      </div>
+      <div className="bg-white flex-row w-60 border rounded-md h-auto justify-between m-3 pl-4 pr-4 pt-4 pb-2">
+        <div className="flex w-full justify-between items-center mb-4">
+          <h2 className="text-sm">DEV Community</h2>
+          <span>
+            <button className="p-1 hover:bg-gray-200 rounded-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                role="img"
+                aria-labelledby="a5dvesoe7aqzaq3fft2f8ptzdog3uv8c"
+                className="crayons-icon pointer-events-none"
+              >
+                <title id="a5dvesoe7aqzaq3fft2f8ptzdog3uv8c">
+                  Dropdown menu
+                </title>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                ></path>
+              </svg>
+            </button>
+          </span>
+        </div>
+        <img
+          className="mb-1"
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--zezDNDfF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8nuyrw43yfedpbj2iieb.jpg"
+          alt=""
+        />
+        <p className="text-gray-700 pb-4 font-bold text-3xl">
+          It's time to change it up.
+        </p>
+        <p className="mb-2">
+          You can change your feed and see more relevant posts by adding a
+          rating to different tags on DEV.
+          <a
+            href=""
+            className="underline text-blue-500 hover:text-blue-700 ml-1"
+          >
+            Head here
+          </a>{" "}
+          to adjust your weights.
+        </p>
+      </div>
     </aside>
   );
 }

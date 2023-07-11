@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import FooterDev from "../components/footer";
 import SideListings from "../components/sideListings";
@@ -6,6 +5,7 @@ import Aside from "../components/aside";
 import PostCard from "../components/postCard";
 import Relevants from "../components/relevants";
 import { useEffect, useState } from "react";
+import SideListingsRight from "../components/sideCardsRight";
 
 export default function Home() {
   const [posts, setPosts] = useState<any>([]);
@@ -37,6 +37,7 @@ export default function Home() {
           </div>
           <div>
             <SideListings />
+            <SideListingsRight />
           </div>
         </div>
       </section>

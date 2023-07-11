@@ -94,7 +94,7 @@ export default function PostCard(post: PostProps) {
                 </a>
               </div>
               <div>
-                <small>{`${post.post.time} 11 min read`}</small>
+                <small>{`${post.post.time} min read`}</small>
                 <a href="#">📒</a>
               </div>
             </div>
